@@ -1,24 +1,163 @@
-<!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <title>🚀 www.VirtualBot.app</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campchess - Privacy Policy</title>
-    <meta name="description" content="Campchess Privacy Policy - Android Chess Application" />
-    <meta name="author" content="Campchess" />
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to ensure full height and smooth transitions */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Light gray background */
+        }
+        .article-content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        /* Style for the Dialog (Modal) */
+        dialog {
+            border: none;
+            padding: 0;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 90vw;
+            width: 400px;
+            background-color: white;
+        }
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body class="is-preload min-h-screen flex flex-col">
 
-    <meta property="og:title" content="Campchess - Privacy Policy" />
-    <meta property="og:description" content="Campchess Privacy Policy - Android Chess Application" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Wrapper -->
+    <div id="wrapper" class="w-full max-w-7xl mx-auto p-4 md:p-8 flex-grow flex flex-col justify-center items-center">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Header / Hero Section -->
+        <header id="header" class="w-full text-center py-16 bg-white shadow-xl rounded-xl mb-10">
+            <div class="logo mb-4">
+                <span class="text-4xl text-indigo-600">💎</span>
+            </div>
+            <div class="content">
+                <div class="inner p-4">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">🚀 www.VirtualBot.app</h1>
+                    <p class="text-lg text-gray-600">Silea by Khalil Messaoudi</p>
+                    <p class="text-md text-gray-500 mt-1">App Developer | UI/UX Designer | Instagram Influencer | Domain Investor</p>
+                </div>
+            </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            <!-- New Buttons Section -->
+            <div class="flex justify-center space-x-4 mt-8">
+                <!-- ChessCamp Game Button -->
+                <a href="#" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+                    Play ChessCamp
+                </a>
+
+                <!-- Privacy Policy Button (Blue) -->
+                <button id="privacyPolicyBtn" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                    Privacy Policy
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area - Simplified Articles -->
+        <div id="main" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Intro -->
+            <article id="intro" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Hello and Welcome!</h2>
+                <p class="text-gray-600 mb-2">I’m Khalil Messaoudi, a passionate app developer and designer with a love for creating innovative digital experiences. I also share my journey, tutorials, and tech insights on YouTube and Instagram.</p>
+                <p class="text-gray-600">This website is currently under development, but soon you’ll be able to explore my projects, apps, and full portfolio. My focus is on building intuitive apps, designing clean interfaces, and delivering creative solutions for users worldwide.</p>
+            </article>
+
+            <!-- Upcoming Apps -->
+            <article id="apps" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Upcoming Apps</h2>
+                <div class="space-y-3">
+                    <p class="font-semibold text-indigo-600">CampChess</p>
+                    <p class="text-gray-600">An engaging chess app designed to challenge your mind and entertain at the same time. **(First Game Added!)**</p>
+                </div>
+                <p class="text-gray-500 mt-4">More exciting projects coming soon…</p>
+            </article>
+
+            <!-- Work / Why Work With Me -->
+            <article id="work" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Why Work With Me</h2>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>**App Development:** Android & cross-platform apps built with efficiency and performance in mind.</li>
+                    <li>**UI/UX Design:** Modern, user-friendly, and visually appealing designs.</li>
+                    <li>**Creative Content:** Tutorials, tech reviews, and app insights shared on YouTube and Instagram.</li>
+                </ul>
+            </article>
+        </div>
+        
+        <!-- Contact Section -->
+        <article id="contact" class="article-content w-full max-w-xl mx-auto mt-8 bg-white p-6 rounded-xl shadow-lg text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-3">Get in Touch</h2>
+            <p class="text-gray-600">Email: <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-600 hover:underline">sileatunisiasat@gmail.com</a></p>
+            <p class="text-gray-500 mt-2">Follow me on YouTube for updates and tutorials.</p>
+        </article>
+
+        <!-- Footer -->
+        <footer id="footer" class="mt-10 py-6 text-center text-gray-500 text-sm w-full">
+            <div class="flex justify-center space-x-4 mb-2">
+                <a href="https://www.instagram.com/_kalos.x" target="_blank" class="hover:text-gray-700 transition">Instagram</a>
+                <span class="text-gray-400">|</span>
+                <a href="https://x.com/kalos_15" target="_blank" class="hover:text-gray-700 transition">X</a>
+                <span class="text-gray-400">|</span>
+                <a href="mailto:sileatunisiasat@gmail.com" class="hover:text-gray-700 transition">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2025 Khalil Messaoudi. Design inspired by HTML5 UP.</p>
+        </footer>
+
+    </div>
+    
+    <!-- Privacy Policy Modal (Dialog Element) -->
+    <dialog id="privacyModal">
+        <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h3>
+            <p class="text-gray-700 text-lg">(ddd)</p>
+            <button id="closeModalBtn" class="mt-6 w-full px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transition">
+                Close
+            </button>
+        </div>
+    </dialog>
+
+    <!-- JavaScript for Modal Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const privacyModal = document.getElementById('privacyModal');
+            const privacyPolicyBtn = document.getElementById('privacyPolicyBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+
+            // Open the modal
+            if (privacyPolicyBtn && privacyModal) {
+                privacyPolicyBtn.addEventListener('click', () => {
+                    privacyModal.showModal();
+                });
+            }
+
+            // Close the modal
+            if (closeModalBtn && privacyModal) {
+                closeModalBtn.addEventListener('click', () => {
+                    privacyModal.close();
+                });
+            }
+
+            // Optional: Close modal if backdrop is clicked
+            if (privacyModal) {
+                privacyModal.addEventListener('click', (event) => {
+                    if (event.target === privacyModal) {
+                        privacyModal.close();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
 </html>
