@@ -3,122 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>♟ ChessCamp by Silea</title>
+  <title>ChessCamp by Silea ♟</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 40%, #fefefe 100%);
+      color: #1f2937;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
     dialog {
       border: none;
       padding: 0;
       border-radius: 0.75rem;
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-      max-width: 90vw;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.15);
       width: 600px;
-      background-color: white;
+      max-width: 90vw;
+      background: white;
     }
     dialog::backdrop {
-      background-color: rgba(0,0,0,0.6);
-    }
-    .policy-content {
-      max-height: 80vh;
-      overflow-y: auto;
-      padding-right: 1rem;
+      background-color: rgba(0,0,0,0.7);
     }
   </style>
 </head>
 
-<body class="min-h-screen flex flex-col">
+<body class="flex flex-col min-h-screen">
 
-  <div id="wrapper" class="w-full max-w-7xl mx-auto p-6 md:p-10 flex-grow flex flex-col justify-center items-center">
-
-    <!-- Hero Section -->
-    <header id="header" class="w-full text-center py-16 bg-white shadow-xl rounded-xl mb-10">
-      <div class="mb-4 text-5xl text-indigo-600">♛</div>
-      <div class="inner">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">ChessCamp</h1>
-        <p class="text-lg text-gray-600">by Silea</p>
-        <p class="text-md text-gray-500 mt-1">Android Chess Game</p>
+  <!-- Hero Section -->
+  <header class="relative overflow-hidden py-24 text-center bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-500 text-white shadow-xl">
+    <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]"></div>
+    <div class="relative z-10">
+      <div class="text-6xl mb-4 animate-pulse">♟</div>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-3">ChessCamp</h1>
+      <p class="text-xl mb-4">A Creative Project by <span class="font-semibold">Silea</span></p>
+      <p class="text-md text-indigo-100 mb-10">Train your strategy. Play with elegance.</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#" class="px-8 py-3 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-indigo-100 transition">Play Now</a>
+        <button id="privacyPolicyBtn" class="px-8 py-3 bg-indigo-800 font-semibold rounded-lg shadow-md hover:bg-indigo-900 transition">Privacy Policy</button>
       </div>
-
-      <div class="flex justify-center space-x-4 mt-8">
-        <a href="#" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
-          Play ChessCamp
-        </a>
-        <button id="privacyPolicyBtn" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-          Privacy Policy
-        </button>
-      </div>
-    </header>
-
-    <!-- Content Grid -->
-    <div id="main" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Intro -->
-      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h2 class="text-2xl font-bold text-gray-800 mb-3">Welcome to ChessCamp</h2>
-        <p class="text-gray-600 mb-2">
-          I’m <strong>Khalil Messaoudi</strong>, an independent app developer and designer dedicated to crafting smart, intuitive digital experiences. I focus on creating apps that blend elegant design with seamless functionality.
-        </p>
-        <p class="text-gray-600">
-          This site is currently being developed. Soon, you’ll be able to explore my portfolio, download apps, and follow the progress of new projects. My goal is to build software that inspires creativity and brings value to users everywhere.
-        </p>
-      </article>
-
-      <!-- Upcoming Apps -->
-      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h2 class="text-2xl font-bold text-gray-800 mb-3">Upcoming Projects</h2>
-        <div class="space-y-3">
-          <p class="font-semibold text-indigo-600">ChessCamp</p>
-          <p class="text-gray-600 mb-3">
-            A modern, engaging chess game designed to sharpen your mind and provide a relaxing, ad-free experience. 
-          </p>
-          <button class="text-xs px-3 py-1 bg-gray-200 text-gray-700 font-semibold rounded-full shadow-sm hover:bg-gray-300 transition duration-300"
-            onclick="document.getElementById('privacyModal').showModal()">
-            View Privacy Policy
-          </button>
-        </div>
-        <p class="text-gray-500 mt-4">Stay tuned for more apps and updates coming soon.</p>
-      </article>
-
-      <!-- Why Work With Me -->
-      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h2 class="text-2xl font-bold text-gray-800 mb-3">Why Collaborate With Me</h2>
-        <ul class="list-disc list-inside text-gray-600 space-y-2">
-          <li><strong>App Development:</strong> Fast, efficient Android and cross-platform development focused on performance and stability.</li>
-          <li><strong>UI/UX Design:</strong> Clean, user-focused interfaces with intuitive experiences that delight users.</li>
-          <li><strong>Creative Insight:</strong> I share development insights, design tutorials, and project updates across my social channels.</li>
-        </ul>
-      </article>
     </div>
+  </header>
 
-    <!-- Contact -->
-    <article class="w-full max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-lg text-center">
-      <h2 class="text-2xl font-bold text-gray-800 mb-3">Get in Touch</h2>
-      <p class="text-gray-600">Email: 
-        <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-600 hover:underline">
-          sileatunisiasat@gmail.com
-        </a>
+  <!-- Main Section -->
+  <main class="flex-grow w-full max-w-7xl mx-auto px-6 md:px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- About -->
+    <article class="glass p-8 rounded-2xl shadow-lg fade-in hover:shadow-2xl transition duration-500">
+      <h2 class="text-3xl font-bold mb-3 text-indigo-700">Welcome to ChessCamp</h2>
+      <p class="text-gray-700 mb-3">
+        I’m <strong>Khalil Messaoudi</strong>, an independent developer passionate about blending logic and design. 
+        I build applications that combine functionality, simplicity, and creativity.
       </p>
-      <p class="text-gray-500 mt-2">Follow my journey and latest updates on social media.</p>
+      <p class="text-gray-700">
+        ChessCamp is part of my growing collection of digital experiences — designed to entertain, inspire, and challenge your mind.
+      </p>
     </article>
 
-    <!-- Footer -->
-    <footer class="mt-10 py-6 text-center text-gray-500 text-sm w-full">
-      <div class="flex justify-center space-x-4 mb-2">
-        <a href="https://www.instagram.com/_kalos.x" target="_blank" class="hover:text-gray-700 transition">Instagram</a>
-        <span class="text-gray-400">|</span>
-        <a href="https://x.com/kalos_15" target="_blank" class="hover:text-gray-700 transition">X</a>
-        <span class="text-gray-400">|</span>
-        <a href="mailto:sileatunisiasat@gmail.com" class="hover:text-gray-700 transition">Contact</a>
-      </div>
-      <p>&copy; 2025 Silea. Developed by Khalil Messaoudi.</p>
-    </footer>
-  </div>
+    <!-- Upcoming Apps -->
+    <article class="glass p-8 rounded-2xl shadow-lg fade-in hover:shadow-2xl transition duration-500 delay-100">
+      <h2 class="text-3xl font-bold mb-3 text-indigo-700">What’s Coming Next</h2>
+      <p class="text-gray-700 mb-4">
+        <strong>ChessCamp</strong> is just the beginning. My future apps aim to bring thoughtful design and engaging gameplay to users around the world — no ads, no distractions, just a great experience.
+      </p>
+      <button class="text-sm px-4 py-2 bg-indigo-100 text-indigo-700 font-semibold rounded-full hover:bg-indigo-200 transition"
+        onclick="document.getElementById('privacyModal').showModal()">View Privacy Policy</button>
+      <p class="text-gray-500 mt-4">More creative projects are already in development — stay tuned.</p>
+    </article>
 
-  <!-- Privacy Policy Modal -->
+    <!-- Services -->
+    <article class="glass p-8 rounded-2xl shadow-lg fade-in hover:shadow-2xl transition duration-500 delay-200">
+      <h2 class="text-3xl font-bold mb-3 text-indigo-700">What I Offer</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>App Development:</strong> Fast, efficient Android apps built with performance and simplicity.</li>
+        <li><strong>UI/UX Design:</strong> Clean, intuitive, and engaging visual experiences.</li>
+        <li><strong>Creative Direction:</strong> Innovative ideas for games, tools, and digital storytelling.</li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- Contact -->
+  <section class="max-w-xl mx-auto mb-10 glass p-8 rounded-2xl text-center shadow-lg fade-in">
+    <h2 class="text-3xl font-bold mb-4 text-indigo-700">Let’s Connect</h2>
+    <p class="text-gray-700 mb-3">Interested in collaborations or feedback?</p>
+    <p class="text-gray-600">Email me at 
+      <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-700 hover:underline">sileatunisiasat@gmail.com</a>
+    </p>
+    <p class="text-gray-500 mt-3">Follow my latest work and updates below.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-gray-600 text-sm border-t border-gray-200">
+    <div class="flex justify-center space-x-4 mb-2">
+      <a href="https://www.instagram.com/_kalos.x" target="_blank" class="hover:text-indigo-700 transition">Instagram</a>
+      <span class="text-gray-400">|</span>
+      <a href="https://x.com/kalos_15" target="_blank" class="hover:text-indigo-700 transition">X</a>
+      <span class="text-gray-400">|</span>
+      <a href="mailto:sileatunisiasat@gmail.com" class="hover:text-indigo-700 transition">Email</a>
+    </div>
+    <p class="mt-2">&copy; 2025 <strong>Silea</strong>. Designed by Khalil Messaoudi.</p>
+  </footer>
+
+  <!-- Privacy Modal -->
   <dialog id="privacyModal">
     <div class="p-6">
       <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy – ChessCamp</h3>
@@ -161,19 +162,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const privacyModal = document.getElementById('privacyModal');
-      const privacyPolicyBtn = document.getElementById('privacyPolicyBtn');
-      const closeModalBtn = document.getElementById('closeModalBtn');
-
-      if (privacyPolicyBtn && privacyModal) {
-        privacyPolicyBtn.addEventListener('click', () => privacyModal.showModal());
-      }
-      if (closeModalBtn && privacyModal) {
-        closeModalBtn.addEventListener('click', () => privacyModal.close());
-      }
-      privacyModal.addEventListener('click', (e) => {
-        if (e.target === privacyModal) privacyModal.close();
-      });
+      const modal = document.getElementById('privacyModal');
+      document.getElementById('privacyPolicyBtn').addEventListener('click', () => modal.showModal());
+      document.getElementById('closeModalBtn').addEventListener('click', () => modal.close());
+      modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
     });
   </script>
 
