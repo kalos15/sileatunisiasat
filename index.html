@@ -1,218 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>♚ ♛ ♜ ♝ ♞ ♟</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles to ensure full height and smooth transitions */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Light gray background */
-        }
-        .article-content {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-        /* Style for the Dialog (Modal) */
-        dialog {
-            border: none;
-            padding: 0;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            max-width: 90vw;
-            width: 600px; /* Increased width for better reading experience */
-            background-color: white;
-        }
-        dialog::backdrop {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .policy-content {
-            max-height: 80vh; /* Limit height to 80% of viewport height */
-            overflow-y: auto; /* Enable scrolling */
-            padding-right: 1rem; /* Space for the scrollbar */
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>♟ ChessCamp by Silea</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+    dialog {
+      border: none;
+      padding: 0;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      max-width: 90vw;
+      width: 600px;
+      background-color: white;
+    }
+    dialog::backdrop {
+      background-color: rgba(0,0,0,0.6);
+    }
+    .policy-content {
+      max-height: 80vh;
+      overflow-y: auto;
+      padding-right: 1rem;
+    }
+  </style>
 </head>
-<body class="is-preload min-h-screen flex flex-col">
 
-    <!-- Wrapper -->
-    <div id="wrapper" class="w-full max-w-7xl mx-auto p-4 md:p-8 flex-grow flex flex-col justify-center items-center">
+<body class="min-h-screen flex flex-col">
 
-        <!-- Header / Hero Section -->
-        <header id="header" class="w-full text-center py-16 bg-white shadow-xl rounded-xl mb-10">
-            <div class="logo mb-4">
-                <span class="text-4xl text-indigo-600">💎</span>
-            </div>
-            <div class="content">
-                                <div class="inner p-4">
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">♟ Chesscamp</h1>
-                    <p class="text-lg text-gray-600">By Silea</p>
-                    <p class="text-md text-gray-500 mt-1">Android Game</p>
-                </div>
-            </div>
+  <div id="wrapper" class="w-full max-w-7xl mx-auto p-6 md:p-10 flex-grow flex flex-col justify-center items-center">
 
-            <!-- New Buttons Section -->
-            <div class="flex justify-center space-x-4 mt-8">
-                <!-- ChessCamp Game Button -->
-                <a href="#" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
-                    Play ChessCamp
-                </a>
+    <!-- Hero Section -->
+    <header id="header" class="w-full text-center py-16 bg-white shadow-xl rounded-xl mb-10">
+      <div class="mb-4 text-5xl text-indigo-600">♛</div>
+      <div class="inner">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">ChessCamp</h1>
+        <p class="text-lg text-gray-600">by Silea</p>
+        <p class="text-md text-gray-500 mt-1">Android Chess Game</p>
+      </div>
 
-                <!-- Privacy Policy Button (Blue) -->
-                <button id="privacyPolicyBtn" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-                    Privacy Policy
-                </button>
-            </div>
-        </header>
+      <div class="flex justify-center space-x-4 mt-8">
+        <a href="#" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-300">
+          Play ChessCamp
+        </a>
+        <button id="privacyPolicyBtn" class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+          Privacy Policy
+        </button>
+      </div>
+    </header>
 
-        <!-- Main Content Area - Simplified Articles -->
-        <div id="main" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Content Grid -->
+    <div id="main" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- Intro -->
-            <article id="intro" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">Hello and Welcome!</h2>
-                <p class="text-gray-600 mb-2">I’m Khalil Messaoudi, a passionate app developer and designer with a love for creating innovative digital experiences. I also share my journey, tutorials, and tech insights on Instagram.</p>
-                <p class="text-gray-600">This website is currently under development, but soon you’ll be able to explore my projects, apps, and full portfolio. My focus is on building intuitive apps, designing clean interfaces, and delivering creative solutions for users worldwide.
- </p>
-            </article>
+      <!-- Intro -->
+      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Welcome to ChessCamp</h2>
+        <p class="text-gray-600 mb-2">
+          I’m <strong>Khalil Messaoudi</strong>, an independent app developer and designer dedicated to crafting smart, intuitive digital experiences. I focus on creating apps that blend elegant design with seamless functionality.
+        </p>
+        <p class="text-gray-600">
+          This site is currently being developed. Soon, you’ll be able to explore my portfolio, download apps, and follow the progress of new projects. My goal is to build software that inspires creativity and brings value to users everywhere.
+        </p>
+      </article>
 
-            <!-- Upcoming Apps -->
-            <article id="apps" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Upcoming Apps</h2>
-                <div class="space-y-3">
-                    <p class="font-semibold text-indigo-600">CampChess</p>
-                    <p class="text-gray-600 mb-3">An engaging chess app designed to challenge your mind and entertain at the same time. **(First Game Added!)**</p>
-                    
-                    <!-- NEW PRIVACY POLICY BUTTON FOR CAMPCESS -->
-                    <button class="text-xs px-3 py-1 bg-gray-200 text-gray-700 font-semibold rounded-full shadow-sm hover:bg-gray-300 transition duration-300" 
-                            onclick="document.getElementById('privacyModal').showModal()">
-                        View Privacy Policy
-                    </button>
-                </div>
-                <p class="text-gray-500 mt-4">More exciting projects coming soon…</p>
-            </article>
-
-            <!-- Work / Why Work With Me -->
-            <article id="work" class="article-content bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-                <h2 class="text-2xl font-bold text-gray-800 mb-3">Why Work With Me</h2>
-                <ul class="list-disc list-inside text-gray-600 space-y-2">
-                    <li>**App Development:** Android & cross-platform apps built with efficiency and performance in mind.</li>
-                    <li>**UI/UX Design:** Modern, user-friendly, and visually appealing designs.</li>
-                    <li>**Creative Content:** Tutorials, tech reviews, and app insights shared on Instagram.</li>
-                </ul>
-            </article>
+      <!-- Upcoming Apps -->
+      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Upcoming Projects</h2>
+        <div class="space-y-3">
+          <p class="font-semibold text-indigo-600">ChessCamp</p>
+          <p class="text-gray-600 mb-3">
+            A modern, engaging chess game designed to sharpen your mind and provide a relaxing, ad-free experience. 
+          </p>
+          <button class="text-xs px-3 py-1 bg-gray-200 text-gray-700 font-semibold rounded-full shadow-sm hover:bg-gray-300 transition duration-300"
+            onclick="document.getElementById('privacyModal').showModal()">
+            View Privacy Policy
+          </button>
         </div>
-        
-        <!-- Contact Section -->
-        <article id="contact" class="article-content w-full max-w-xl mx-auto mt-8 bg-white p-6 rounded-xl shadow-lg text-center">
-            <h2 class="text-2xl font-bold text-gray-800 mb-3">Get in Touch</h2>
-            <p class="text-gray-600">Email: <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-600 hover:underline">sileatunisiasat@gmail.com</a></p>
-            <p class="text-gray-500 mt-2">Follow me on x.</p>
-        </article>
+        <p class="text-gray-500 mt-4">Stay tuned for more apps and updates coming soon.</p>
+      </article>
 
-        <!-- Footer -->
-        <footer id="footer" class="mt-10 py-6 text-center text-gray-500 text-sm w-full">
-            <div class="flex justify-center space-x-4 mb-2">
-                <a href="https://www.instagram.com/_kalos.x" target="_blank" class="hover:text-gray-700 transition">Instagram</a>
-                <span class="text-gray-400">|</span>
-                <a href="https://x.com/kalos_15" target="_blank" class="hover:text-gray-700 transition">X</a>
-                <span class="text-gray-400">|</span>
-                <a href="mailto:sileatunisiasat@gmail.com" class="hover:text-gray-700 transition">Contact</a>
-            </div>
-            <p class="copyright">&copy; 2025 Silea by Khalil Messaoudi.</p>
-        </footer>
-
+      <!-- Why Work With Me -->
+      <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h2 class="text-2xl font-bold text-gray-800 mb-3">Why Collaborate With Me</h2>
+        <ul class="list-disc list-inside text-gray-600 space-y-2">
+          <li><strong>App Development:</strong> Fast, efficient Android and cross-platform development focused on performance and stability.</li>
+          <li><strong>UI/UX Design:</strong> Clean, user-focused interfaces with intuitive experiences that delight users.</li>
+          <li><strong>Creative Insight:</strong> I share development insights, design tutorials, and project updates across my social channels.</li>
+        </ul>
+      </article>
     </div>
-    
-    <!-- Privacy Policy Modal (Dialog Element) -->
-    <dialog id="privacyModal">
-        <div class="p-6">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy for ChessCamp</h3>
-            <div class="policy-content space-y-4 text-sm text-gray-700">
-                
-                <p class="font-bold">Last Updated: October 16, 2025</p>
 
-                <p>This Privacy Policy governs the manner in which the **ChessCamp** mobile application ("the App"), developed by **Silea** ("Developer"), collects, uses, maintains, and discloses information collected from users ("User" or "you") of the App.</p>
+    <!-- Contact -->
+    <article class="w-full max-w-xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-lg text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-3">Get in Touch</h2>
+      <p class="text-gray-600">Email: 
+        <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-600 hover:underline">
+          sileatunisiasat@gmail.com
+        </a>
+      </p>
+      <p class="text-gray-500 mt-2">Follow my journey and latest updates on social media.</p>
+    </article>
 
-                <h4 class="text-lg font-semibold text-gray-800">1. Non-Collection of Personal Information</h4>
-                <p>The **ChessCamp** App is designed to be a completely offline, stand-alone application.</p>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                    <li>**We Do Not Collect Personal Data:** The App does not collect, transmit, store, or share any personally identifiable information (PII) from Users, such as name, email address, location, contacts, or phone numbers.</li>
-                    <li>**No Internet Permission:** The App does not require or utilize the Internet permission (`android.permission.INTERNET`). It cannot communicate with any external servers or services.</li>
-                </ul>
+    <!-- Footer -->
+    <footer class="mt-10 py-6 text-center text-gray-500 text-sm w-full">
+      <div class="flex justify-center space-x-4 mb-2">
+        <a href="https://www.instagram.com/_kalos.x" target="_blank" class="hover:text-gray-700 transition">Instagram</a>
+        <span class="text-gray-400">|</span>
+        <a href="https://x.com/kalos_15" target="_blank" class="hover:text-gray-700 transition">X</a>
+        <span class="text-gray-400">|</span>
+        <a href="mailto:sileatunisiasat@gmail.com" class="hover:text-gray-700 transition">Contact</a>
+      </div>
+      <p>&copy; 2025 Silea. Developed by Khalil Messaoudi.</p>
+    </footer>
+  </div>
 
-                <h4 class="text-lg font-semibold text-gray-800">2. No Third-Party Access to Data</h4>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                    <li>**No Third-Party Analytics:** The App does not use any third-party analytics services (such as Firebase Analytics or Google Analytics).</li>
-                    <li>**No Advertising:** The App does not contain any advertisements and therefore does not utilize any third-party advertising SDKs that would track user data.</li>
-                    <li>**No Social Features:** The App does not integrate with social media networks or require social logins.</li>
-                </ul>
+  <!-- Privacy Policy Modal -->
+  <dialog id="privacyModal">
+    <div class="p-6">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy – ChessCamp</h3>
+      <div class="policy-content space-y-4 text-sm text-gray-700">
+        <p class="font-bold">Last Updated: October 16, 2025</p>
 
-                <h4 class="text-lg font-semibold text-gray-800">3. Local Data Storage (Non-Personal)</h4>
-                <p>The App stores operational data **locally and privately** on your device to ensure a smooth gameplay experience. This data is **not personal and cannot be accessed by the Developer or any third party**.</p>
-                <p>This local data may include:</p>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                    <li>Game progress and state.</li>
-                    <li>The last known board positions.</li>
-                    <li>User-set preferences, such as AI difficulty level or theme settings.</li>
-                </ul>
-                <p>This data is stored only within the App's private sandbox and is deleted when the App is uninstalled.</p>
+        <p>This Privacy Policy explains how <strong>ChessCamp</strong> (“the App”), developed by <strong>Silea</strong> (“Developer”), manages user data. The App is designed for complete offline use and does not collect or share any personal information.</p>
 
-                <h4 class="text-lg font-semibold text-gray-800">4. Children’s Privacy</h4>
-                <p>The App is intended for users of all ages, and because we do not collect any personal data whatsoever, we comply with global privacy regulations concerning children.</p>
+        <h4 class="text-lg font-semibold text-gray-800">1. No Collection of Personal Information</h4>
+        <p>The App operates entirely offline. It does not collect, store, or transmit any personal data such as names, emails, or locations. Internet permissions are not requested or used.</p>
 
-                <h4 class="text-lg font-semibold text-gray-800">5. Changes to this Privacy Policy</h4>
-                <p>The Developer has the discretion to update this privacy policy at any time. When we do, we will revise the "Last Updated" date at the top of this page. We encourage Users to frequently check this page for any changes. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
+        <h4 class="text-lg font-semibold text-gray-800">2. No Third-Party Services</h4>
+        <ul class="list-disc list-inside ml-4 space-y-1">
+          <li>No analytics or tracking tools are integrated.</li>
+          <li>No advertisements or third-party SDKs are included.</li>
+          <li>No social logins or data sharing features are present.</li>
+        </ul>
 
-                <h4 class="text-lg font-semibold text-gray-800">6. Your Acceptance of these Terms</h4>
-                <p>By using the **ChessCamp** App, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our App.</p>
+        <h4 class="text-lg font-semibold text-gray-800">3. Local Data Storage</h4>
+        <p>Minimal non-personal data such as game progress, board state, and user settings are stored locally on your device. This information remains private and is deleted when the App is uninstalled.</p>
 
-                <h4 class="text-lg font-semibold text-gray-800">7. Contacting Us</h4>
-                <p>If you have any questions about this Privacy Policy, the practices of this App, or your dealings with this App, please contact us at:</p>
-                <p class="font-bold">Khalil Messaoudi<br>sileatunisiasat@gmail.com</p>
-                
-            </div>
-            <button id="closeModalBtn" class="mt-6 w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
-                I Understand and Close
-            </button>
-        </div>
-    </dialog>
+        <h4 class="text-lg font-semibold text-gray-800">4. Children’s Privacy</h4>
+        <p>ChessCamp is suitable for all ages and complies with children’s privacy standards by not collecting any personal data.</p>
 
-    <!-- JavaScript for Modal Functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const privacyModal = document.getElementById('privacyModal');
-            const privacyPolicyBtn = document.getElementById('privacyPolicyBtn');
-            const closeModalBtn = document.getElementById('closeModalBtn');
+        <h4 class="text-lg font-semibold text-gray-800">5. Policy Updates</h4>
+        <p>We may update this policy periodically. The “Last Updated” date will always reflect the latest version.</p>
 
-            // Open the modal
-            if (privacyPolicyBtn && privacyModal) {
-                privacyPolicyBtn.addEventListener('click', () => {
-                    privacyModal.showModal();
-                });
-            }
+        <h4 class="text-lg font-semibold text-gray-800">6. Contact</h4>
+        <p>If you have any questions regarding this Privacy Policy, please contact:</p>
+        <p class="font-bold">
+          Khalil Messaoudi<br>
+          <a href="mailto:sileatunisiasat@gmail.com" class="text-indigo-600 hover:underline">sileatunisiasat@gmail.com</a>
+        </p>
+      </div>
+      <button id="closeModalBtn" class="mt-6 w-full px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
+        Close
+      </button>
+    </div>
+  </dialog>
 
-            // Close the modal
-            if (closeModalBtn && privacyModal) {
-                closeModalBtn.addEventListener('click', () => {
-                    privacyModal.close();
-                });
-            }
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const privacyModal = document.getElementById('privacyModal');
+      const privacyPolicyBtn = document.getElementById('privacyPolicyBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
 
-            // Optional: Close modal if backdrop is clicked
-            if (privacyModal) {
-                privacyModal.addEventListener('click', (event) => {
-                    if (event.target === privacyModal) {
-                        privacyModal.close();
-                    }
-                });
-            }
-        });
-    </script>
+      if (privacyPolicyBtn && privacyModal) {
+        privacyPolicyBtn.addEventListener('click', () => privacyModal.showModal());
+      }
+      if (closeModalBtn && privacyModal) {
+        closeModalBtn.addEventListener('click', () => privacyModal.close());
+      }
+      privacyModal.addEventListener('click', (e) => {
+        if (e.target === privacyModal) privacyModal.close();
+      });
+    });
+  </script>
 
 </body>
 </html>
